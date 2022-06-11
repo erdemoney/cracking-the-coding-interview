@@ -3,10 +3,12 @@ import sys
 # question:
 #   Implement an algorithm to determine if a string has all unique characters
 #   What if you cannot use additonal data structures?
+#
 # concept:
 #   use a map to record each seen character
 #   if a character has already been seen,
 #   return False
+
 def isUnique(str):
     char_set = {}
     for c in str:
