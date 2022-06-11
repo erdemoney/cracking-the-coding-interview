@@ -1,6 +1,12 @@
 import sys
 from collections import Counter
 
+# question:
+#   Given a stirng, write a function to check if it is a permutation of a
+#   palindrome. A palindrome is a word or phrase that is the same forwards and
+#   backwards. A permutation is a rearrangement of letters. The palindrome does
+#   not need to be limited to just dictionary words.
+#
 # concept:
 #   a string is a permutation of a palindrome if it has no more than one character count that is odd
 #   a palindrome has the even counts for each letter with the exception of the center character which

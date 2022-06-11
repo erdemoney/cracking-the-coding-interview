@@ -1,8 +1,12 @@
 import sys
 
-# use a map to record each seen character
-# if a character has already been seen,
-# return False
+# question:
+#   Implement an algorithm to determine if a string has all unique characters
+#   What if you cannot use additonal data structures?
+# concept:
+#   use a map to record each seen character
+#   if a character has already been seen,
+#   return False
 def isUnique(str):
     char_set = {}
     for c in str:
@@ -10,7 +14,6 @@ def isUnique(str):
             return False
         char_set[c] = 1 
     return True
-    
 
 def main() -> int:
     for i in range(1, len(sys.argv)):
@@ -21,5 +24,4 @@ def main() -> int:
         print(str, 'does not have all unique characters')
     return 0
 
-if __name__ == '__main__':
-    sys.exit(main())
+sys.exit(main())
