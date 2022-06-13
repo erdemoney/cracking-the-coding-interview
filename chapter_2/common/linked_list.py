@@ -17,15 +17,23 @@ class SinglyLinkedList:
         node = self.head
         nodes = []
         while node is not None:
-            nodes.append(node.data)
+            nodes.append(str(node.data))
             node = node.next
         nodes.append("None")
         return " -> ".join(nodes)
 
-    def insert(self, data):
+    def __len__(self):
+        length = 0
+        node = self.head
+        while node is not None:
+            length += 1
+            node = node.next
+        return length
+
+    def insert(self, node: Node):
         if self.head is None:
-            self.head = Node(data)
+            self.head = node
             return
         for cur in self:
             pass
-        cur.next = Node(data)
+        cur.next = node

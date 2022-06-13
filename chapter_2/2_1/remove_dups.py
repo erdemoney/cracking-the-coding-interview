@@ -1,6 +1,7 @@
 import sys
 from ..common.linked_list import *
 
+
 # question:
 #   Write code to remove duplicates from an unsorted linked list.
 #   FOLLOW UP

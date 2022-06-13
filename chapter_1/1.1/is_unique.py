@@ -9,21 +9,21 @@ import sys
 #   if a character has already been seen,
 #   return False
 
-def isUnique(str):
+def isUnique(s: str) -> bool:
     char_set = {}
-    for c in str:
+    for c in s:
         if char_set.get(c) != None:
             return False
         char_set[c] = 1 
     return True
 
 def main() -> int:
-    for i in range(1, len(sys.argv)):
-        str = sys.argv[i]
-        if isUnique(str):
-            print(str, 'has all unique characters')
-            continue
-        print(str, 'does not have all unique characters')
+    args = sys.argv[1::]
+    for arg in args:
+        if isUnique(arg):
+            print(arg, 'has all unique characters')
+        else:
+            print(arg, 'does not have all unique characters')
     return 0
 
 sys.exit(main())
